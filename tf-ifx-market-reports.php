@@ -8,6 +8,11 @@
  * Author URI:        https://www.thinkingfox.com/
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+require_once( ABSPATH . "wp-includes/pluggable.php" );
+
 // Create an ACF options page
 include( plugin_dir_path( __FILE__ ) . '/includes/options_page.php');
 // Create ACF Fields for Market Report JSON URL & Market Report Title
@@ -17,3 +22,4 @@ include( plugin_dir_path( __FILE__ ) . '/includes/date.php');
 // Get JSON data from JSON URL
 include( plugin_dir_path( __FILE__ ) . '/includes/get_json.php');
 // Create post
+include( plugin_dir_path( __FILE__ ) . '/includes/create_post.php');
