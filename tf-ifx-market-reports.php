@@ -12,5 +12,8 @@
 include( plugin_dir_path( __FILE__ ) . '/includes/options_page.php');
 // Create ACF Fields for Market Report JSON URL & Market Report Title
 include( plugin_dir_path( __FILE__ ) . '/includes/acf_fields.php');
+// Include Date Format Function
+include( plugin_dir_path( __FILE__ ) . '/includes/date.php');
 // Get JSON data from JSON URL
+
 // Create post
