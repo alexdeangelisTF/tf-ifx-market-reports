@@ -15,5 +15,5 @@ include( plugin_dir_path( __FILE__ ) . '/includes/acf_fields.php');
 // Include Date Format Function
 include( plugin_dir_path( __FILE__ ) . '/includes/date.php');
 // Get JSON data from JSON URL
-
+include( plugin_dir_path( __FILE__ ) . '/includes/get_json.php');
 // Create post
