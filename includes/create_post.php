@@ -1,7 +1,8 @@
 <?php
 
 $market_report_title = get_field('ifx_market_report_title','option');
-
+$market_report_post_category = get_field('ifx_market_report_post_category','option');
+$market_report_post_author = get_field('ifx_market_report_post_author','option');
 // If there is a market report title & the JSON text has been received
 if ($market_report_title && $ifx_json_text) {
 
@@ -18,8 +19,8 @@ if ($market_report_title && $ifx_json_text) {
 			'post_title'    => wp_strip_all_tags( $post_title_check ),
 			'post_content'  => $ifx_json_text,
 			'post_status'   => 'draft',
-			//'post_author'   => 2,
-			//'post_category' => array( 58 ),
+			'post_author'   => $market_report_post_author,
+			'post_category' => array( $market_report_post_category ),
 			'post_name'     => $post_title_check . '-draft',
 		);
 		// Insert the post into the database
