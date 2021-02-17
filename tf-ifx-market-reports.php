@@ -23,3 +23,12 @@ include( plugin_dir_path( __FILE__ ) . '/includes/date.php');
 include( plugin_dir_path( __FILE__ ) . '/includes/get_json.php');
 // Create post
 include( plugin_dir_path( __FILE__ ) . '/includes/create_post.php');
+
+
+// Kernl Updater
+require 'kernl-update-checker/kernl-update-checker.php';
+$MyUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+    'https://kernl.us/api/v1/updates/602d07a4217b245aa7fa2a15/',
+    __FILE__,
+    'tf-ifx-market-reports'
+);
