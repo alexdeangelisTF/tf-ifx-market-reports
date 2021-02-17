@@ -14,7 +14,7 @@ if( is_wp_error( $request ) ) {
 $body = wp_remote_retrieve_body( $request );
 $data = json_decode( $body );
 if( ! empty( $data ) ) {
-		$json_date = $data->date;
-		$json_text = $data->text;
-		$json_text = wpautop($json_text);
+		$ifx_json_date = $data->date;
+		$ifx_json_text = $data->text;
+		$ifx_json_text = wpautop($ifx_json_text);
 } else { }
