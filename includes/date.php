@@ -1,5 +1,5 @@
 <?php
-
+add_action( 'init', 'ifx_published_date' );
 function ifx_published_date ($publicationdate) {
 
 	if ( !empty( $publicationdate ) ) {
